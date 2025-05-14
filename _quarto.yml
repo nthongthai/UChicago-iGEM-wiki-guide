@@ -1,0 +1,14 @@
+project:
+  type: book
+
+book:
+  title: "Genehackers iGEM Wiki Guide"
+  author: "Nipputi Thongthai"
+  chapters:
+    - index.qmd
+    - repo-setup.qmd
+  page-navigation: true
+
+format:
+  html:
+    theme: materia
