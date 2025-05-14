@@ -18,7 +18,15 @@ Now, the difference between Git and Github is that Git lives on your personal ma
 | **Primary job**      | Create commits, manage branches, inspect history | Store, back-up, and enable collaborations via Pull Requests, Issues, Actions, etc.       |
 | **Typical commands** | `git add`, `git commit`, `git branch`, `git log` | `git push`, `git pull`, `git clone <URL>` <br> *(Git commands that talk **to** GitHub)*  |
 
-*Note:* You can think of Git as the local diary of your project and GitHub as the shared library where everyone can read and contribute to that diary.
+*Note.* You can think of Git as the local diary of your project and GitHub as the shared library where everyone can read and contribute to that diary.
+
+## Prepping to use Github
+
+### Creating a Github Account
+
+*Important.* This is not required since we use our iGEM account to login. Here is where our repository is located: [iGEM UChicago Repository](https://gitlab.igem.org/2025/uchicago). Login to proceed to the next step. If you do not have access, make sure to join the team roster!
+
+*Optional.* If you want to make your own account, you can get a GitHub account [here](https://github.com/join). You can choose any GitHub account name as long as it is not taken yet.
 
 ## Cloning Repository
 
