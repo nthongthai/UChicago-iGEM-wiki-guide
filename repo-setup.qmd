@@ -1,0 +1,36 @@
+---
+title: "Repository Setup"
+---
+
+## Introduction to Git
+
+Like in many of the computer science (CS) classes, we will be using a system called Git to manage our code. You can think of Git as a system for tracking changes to your code, storing your code on a remote server, sharing it with other developers, etc. This system is necessary for working collaboratively with others.
+
+More specifically, Git is a version control system that tracks your files and changes you made to those files. This allows you to group a set of related changes together -- adding a feature, fixing a bug, etc. -- into a single **commit** (i.e. a new checkpoint). You can think of a commit as a checkpoint that represents everything made since the last checkpoint. By commiting ("saving checkpoints"), it makes it possible to revert to older versions of a file (or collections of files) by going back to an older "checkpoint" that you committed. These commits along with your actual files make up your **repository**, which tracks all changes made to files in your project.
+
+*Read this if you have questions:* [UChicago CS Student Resource Guide](https://uchicago-cs.github.io/student-resource-guide/).
+
+Now, the difference between Git and Github is that Git lives on your personal machine while GitHub is a cloud-based home where those Git repositories live. GitHub is necessary for sharing your code with your teammates and instructors.
+
+| Role                 | Git (local)                                      | GitHub (remote)                                                                          |
+|----------------------|--------------------------------------------------|------------------------------------------------------------------------------------------|
+| **Scope**            | Tracks versions of files on your computer        | Hosts *copies* of repositories on the cloud                                              |
+| **Primary job**      | Create commits, manage branches, inspect history | Store, back-up, and enable collaborations via Pull Requests, Issues, Actions, etc.       |
+| **Typical commands** | `git add`, `git commit`, `git branch`, `git log` | `git push`, `git pull`, `git clone <URL>` <br> *(Git commands that talk **to** GitHub)*  |
+
+*Note:* You can think of Git as the local diary of your project and GitHub as the shared library where everyone can read and contribute to that diary.
+
+## Cloning Repository
+
+```bash
+git clone https://gitlab.igem.org/2025/uchicago
+cd uchicago
+```
+
+```bash
+brew install yarn
+```
+
+```bash
+npm install -g yarn
+```
