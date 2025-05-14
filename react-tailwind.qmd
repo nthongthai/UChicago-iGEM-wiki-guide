@@ -1,0 +1,111 @@
+---
+title: "React + Tailwind"
+---
+
+## Overview
+As stated previously in the Preface, this wiki will use **React** (JavaScript Library) for the user-interface layer and **Tailwind CSS** for styling. You can think of React as a declaritive "state -> UI" engine. Rather than issuing step-by-step DOM (Document Object Model) commands ("create a `<div>`, set a text, append it here..."), you instead describe what the interface should look like for a given state. Here is essentially what React does:
+
+1. Builds an in-memory snapshot of the UI (the virtual DOM).
+2. Diffs it against the previous snapshot.
+3. Applies only the minimal DOM changes needed.
+
+This approach lets you treat each piece as an independent, reusable component. Each component recieves data (state) and React handles the rest. Here is an example of an implementation with HTML + Javascript and React.
+
+*HTML + Javascript*
+```Javascript
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Click counter</title>
+  <style>
+    button { font-size: 1rem; padding: 0.5rem 1rem; }
+    p      { font-family: sans-serif; }
+  </style>
+</head>
+<body>
+  <p>You clicked <span id="count">0</span> times.</p>
+  <button id="btn">Click me</button>
+
+  <script>
+    // grab elements
+    const btn   = document.getElementById('btn');
+    const count = document.getElementById('count');
+    let clicks  = 0;
+
+    // attach event listener
+    btn.addEventListener('click', () => {
+      clicks += 1;          // update state
+      count.textContent = clicks; // update DOM manually
+    });
+  </script>
+</body>
+</html>
+```
+*How it works?*
+
+1. You manipulate the DOM directly (`getElementById`, `.textContent`). 
+2. State (`clicks`) lives outside the DOM and must stay in sync by hand.
+
+```javascript
+// DOM manipulation
+
+    btn.addEventListener('click', () => {
+      clicks += 1;          // update state
+      count.textContent = clicks; // update DOM manually
+    });
+```
+
+*React*
+```Javascript
+// index.html
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/index.jsx"></script>
+</body>
+
+// src/index.jsx
+import { useState } from "react";
+
+export default function Counter() {
+  const [clicks, setClicks] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {clicks} times.</p>
+      <button onClick={() => setClicks(clicks + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+createRoot(document.getElementById("root")).render(<Counter />);
+```
+*What changed?*
+
+1. The `click` return variable becomes a declaritive description of what the UI (user interface) should look like in its current state. 
+2. Calling `setClicks` triggers React’s diff-and-patch cycle, turning the new description into the actual DOM.
+3. IMPORTANT: you could drop `<Counter />` in multiple places and each gets isolated state (make multiple, independent copies).
+
+Tailwind CSS, in turn, gives you a bunch of utility classes (`flex`, `bg-indigo-500`, `p-4`, `rounded-lg`), which are essentially predefined CSS rules that tailwind ships for you. Instead of having to write CSS files from scratch, you have "pre-made CSS" building blocks. Here is a comparison if you were to write them both in a CSS file:
+
+*Tailwind*
+```css
+.my-element {
+    @apply flex bg-blue-600 text-white p-4 rounded-lg;
+}
+```
+
+*Normal CSS*
+```css
+.my-element {
+  display: flex;
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 1rem;                 /* p-4 */
+  border-radius: 0.5rem;         /* rounded-lg */
+}
+```
+
+*Note:* Tailwind essentially streamlines the code (less-verbose).
