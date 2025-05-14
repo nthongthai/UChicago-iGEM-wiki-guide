@@ -14,7 +14,7 @@ For this wiki, we will be using **React** (JavaScript Library) for the user-inte
    └─ 📂 assets       # Images, icons, and other static files
 /📂 public            # Compiled output served by the wiki host
 ```
-*Note:* Standard directory for reference (not wiki directory).
+*Note.* Standard directory for reference (not wiki directory).
 
 # Timeline
 

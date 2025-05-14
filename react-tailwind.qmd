@@ -108,4 +108,4 @@ Tailwind CSS, in turn, gives you a bunch of utility classes (`flex`, `bg-indigo-
 }
 ```
 
-*Note:* Tailwind essentially streamlines the code (less-verbose).
+*Note.* Tailwind essentially streamlines the code (less-verbose).
