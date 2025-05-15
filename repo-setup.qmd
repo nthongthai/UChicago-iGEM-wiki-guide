@@ -20,13 +20,28 @@ Now, the difference between Git and Github is that Git lives on your personal ma
 
 *Note.* You can think of Git as the local diary of your project and GitHub as the shared library where everyone can read and contribute to that diary.
 
-## Prepping to use Github
+## Prepping to use GitHub
 
-### Creating a Github Account
+### Creating a GitHub Account
 
-*Important.* This is not required since we use our iGEM account to login. Here is where our repository is located: [iGEM UChicago Repository](https://gitlab.igem.org/2025/uchicago). Login to proceed to the next step. If you do not have access, make sure to join the team roster!
+*Important.* This is not required since we use our iGEM account to login. Here is where our repository is located: [iGEM UChicago Repository](https://gitlab.igem.org/2025/uchicago). Login to proceed to the next step. If you do not have access, make sure to join the team roster! Note that we will be using **GitLab**, which performs the same functionality as **GitHub**.
 
 *Optional.* If you want to make your own account, you can get a GitHub account [here](https://github.com/join). You can choose any GitHub account name as long as it is not taken yet.
+
+### Personal Access Token
+
+To edit (`git push`) the online repository, you need to make a *personal access token* (PAT). A PAT is a random-looking string that you generate on a Git hosing server (GitHub, **GitLab**, etc.) to use in place of a password when you authenticate over HTTPS (HyperText Transfer Protocol Secure). DO NOT SHARE YOUR PERSONAL ACCESS TOKEN!
+
+1. Go to "Settings" (If you can't find Settings, click on Preferences; will take you to the same location).
+2. Go to "Access Tokens".
+3. Click on "Add new Token".
+4. Choose your "Token Name" of your choosing.
+5. (Optional) Add description to "Token description".
+6. Select only "api" for "Select Scopes".
+7. Click "Create personal access token".
+8. Copy "Your new personal access token". SAVE IT FOR LATER STEPS!
+
+Your personal access token should look like a random string of letters and digits (Example. `qOWqceAnzAXcQjD0Lt8N`). This will be later used to give you access to the repository.
 
 ## Cloning Repository
 

@@ -171,7 +171,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#introduction-to-git" id="toc-introduction-to-git" class="nav-link active" data-scroll-target="#introduction-to-git"><span class="header-section-number">1.1</span> Introduction to Git</a></li>
-  <li><a href="#cloning-repository" id="toc-cloning-repository" class="nav-link" data-scroll-target="#cloning-repository"><span class="header-section-number">1.2</span> Cloning Repository</a></li>
+  <li><a href="#prepping-to-use-github" id="toc-prepping-to-use-github" class="nav-link" data-scroll-target="#prepping-to-use-github"><span class="header-section-number">1.2</span> Prepping to use GitHub</a>
+  <ul class="collapse">
+  <li><a href="#creating-a-github-account" id="toc-creating-a-github-account" class="nav-link" data-scroll-target="#creating-a-github-account"><span class="header-section-number">1.2.1</span> Creating a GitHub Account</a></li>
+  <li><a href="#personal-access-token" id="toc-personal-access-token" class="nav-link" data-scroll-target="#personal-access-token"><span class="header-section-number">1.2.2</span> Personal Access Token</a></li>
+  </ul></li>
+  <li><a href="#cloning-repository" id="toc-cloning-repository" class="nav-link" data-scroll-target="#cloning-repository"><span class="header-section-number">1.3</span> Cloning Repository</a></li>
   </ul>
 </nav>
     </div>
@@ -234,10 +239,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<p><em>Note:</em> You can think of Git as the local diary of your project and GitHub as the shared library where everyone can read and contribute to that diary.</p>
+<p><em>Note.</em> You can think of Git as the local diary of your project and GitHub as the shared library where everyone can read and contribute to that diary.</p>
 </section>
-<section id="cloning-repository" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="cloning-repository"><span class="header-section-number">1.2</span> Cloning Repository</h2>
+<section id="prepping-to-use-github" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="prepping-to-use-github"><span class="header-section-number">1.2</span> Prepping to use GitHub</h2>
+<section id="creating-a-github-account" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="creating-a-github-account"><span class="header-section-number">1.2.1</span> Creating a GitHub Account</h3>
+<p><em>Important.</em> This is not required since we use our iGEM account to login. Here is where our repository is located: <a href="https://gitlab.igem.org/2025/uchicago">iGEM UChicago Repository</a>. Login to proceed to the next step. If you do not have access, make sure to join the team roster! Note that we will be using <strong>GitLab</strong>, which performs the same functionality as <strong>GitHub</strong>.</p>
+<p><em>Optional.</em> If you want to make your own account, you can get a GitHub account <a href="https://github.com/join">here</a>. You can choose any GitHub account name as long as it is not taken yet.</p>
+</section>
+<section id="personal-access-token" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="personal-access-token"><span class="header-section-number">1.2.2</span> Personal Access Token</h3>
+<p>To edit (<code>git push</code>) the online repository, you need to make a <em>personal access token</em> (PAT). A PAT is a random-looking string that you generate on a Git hosing server (GitHub, <strong>GitLab</strong>, etc.) to use in place of a password when you authenticate over HTTPS (HyperText Transfer Protocol Secure). DO NOT SHARE YOUR PERSONAL ACCESS TOKEN!</p>
+<ol type="1">
+<li>Go to “Settings” (If you can’t find Settings, click on Preferences; will take you to the same location).</li>
+<li>Go to “Access Tokens”.</li>
+<li>Click on “Add new Token”.</li>
+<li>Choose your “Token Name” of your choosing.</li>
+<li>(Optional) Add description to “Token description”.</li>
+<li>Select only “api” for “Select Scopes”.</li>
+<li>Click “Create personal access token”.</li>
+<li>Copy “Your new personal access token”. SAVE IT FOR LATER STEPS!</li>
+</ol>
+<p>Your personal access token should look like a random string of letters and digits (Example. <code>qOWqceAnzAXcQjD0Lt8N</code>). This will be later used to give you access to the repository.</p>
+</section>
+</section>
+<section id="cloning-repository" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="cloning-repository"><span class="header-section-number">1.3</span> Cloning Repository</h2>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://gitlab.igem.org/2025/uchicago</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> uchicago</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">brew</span> install yarn</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
