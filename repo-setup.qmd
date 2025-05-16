@@ -45,15 +45,59 @@ Your personal access token should look like a random string of letters and digit
 
 ## Cloning Repository
 
+### Basic Terminal Command
+
+I included some of the basic commands for accessing different directories from the terminal.
+
+**First.** `ls` lists all the repository.
+
+*Command.*
+```bash
+(base) <HOSTNAME>:uchicago <USER>$ ls
+```
+*Note.* `uchicago` is our repository name.
+
+*Return.*
+```bash
+dist                    LICENSE                 package.json            src                     tsconfig.node.json      yarn.lock
+index.html              node_modules            README.md               tsconfig.json           vite.config.ts
+```
+
+**Second.** `cd` allows you to move between directories.
+
+The following command let's you move into the *directory* (folder) you want to, which, in this case, is `src`.
+
+*Command.*
+```bash
+(base) <HOSTNAME>:uchicago <USER>$ cd src
+```
+
+To move back to the parent directory (`uchicago` in this case), you instead `cd` into `..` instead of using the name of a *directory*. To explain, `..` is a special directory entry that every directory contains, pointing to its parent directory (the directory 1 level up the tree).
+
+- `.` &#8594; current directory
+- `..` &#8594; parent directory
+
+The following command let's you move back into the parent *directory*.
+
+*Command.*
+```bash
+(base) <HOSTNAME>:uchicago <USER>$ cd ..
+```
+
+### Cloning/Running Local Repository
+
+Choose a folder where you want your repository to be located in. The following instructions will clone instructions.
 ```bash
 git clone https://gitlab.igem.org/2025/uchicago
 cd uchicago
 ```
-
+If you already installed homebrew (Mac only):
 ```bash
 brew install yarn
 ```
-
+If you do not have homebrew installed (Windows, Linux, Mac, etc.):
 ```bash
 npm install -g yarn
 ```
+
+### Push/Pull Repository
